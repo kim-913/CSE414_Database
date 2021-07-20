@@ -1,0 +1,43 @@
+USE geoindex;
+SELECT DISTINCT c1.name as first_country, 
+c2.name as second_country, mountains, seas
+FROM country c1, country c2,
+    sea s1, sea s2, 
+    mountain m1, mountain m2,
+    SPLIT(s1.`-country`, ' ') sc1, 
+    SPLIT(s2.`-country`, ' ') sc2,
+    SPLIT(m1.`-country`, ' ') mc1, 
+    SPLIT(m2.`-country`, ' ') mc2
+LET seas = (SELECT s1.name as sea
+            FROM sea s1, sea s2,
+            SPLIT(s1.`-country`, ' ') scc1,
+            SPLIT(s2.`-country`, ' ') scc2
+            WHERE scc1 = sc1 AND
+            scc2 = sc2 AND
+            s1.`-id` = s2.`-id`),
+    mountains = (SELECT m1.name AS mountain
+                FROM mountain m1, mountain m2,
+                SPLIT(m1.`-country`, ' ') mcc1,
+                SPLIT(m2.`-country`, ' ') mcc2
+                WHERE mcc1 = mc1 AND
+                mcc2 = mc2 AND
+                m1.`-id` = m2.`-id`)
+WHERE sc1 = c1.`-car_code`
+    AND sc2 = c2.`-car_code` 
+    AND mc1 = sc1  
+    AND mc2 = sc2
+    AND s1.`-id` = s2.`-id` 
+    AND m1.`-id` = m2.`-id` 
+    AND c1.`-car_code` > c2.`-car_code`;
+
+/*
+Duration of all jobs: 0.741 sec
+results:
+{ "mountains": [ { "mountain": "Kasbek" } ], "seas": [ { "sea": "Black Sea" } ], "first_country": "Russia", "second_country": "Georgia" }
+{ "mountains": [ { "mountain": "Sulitjelma" } ], "seas": [ { "sea": "Skagerrak" } ], "first_country": "Sweden", "second_country": "Norway" }
+{ "mountains": [ { "mountain": "Ojos del Salado" }, { "mountain": "Llullaillaco" } ], "seas": [ { "sea": "Atlantic Ocean" } ], "first_country": "Chile", "second_country": "Argentina" }
+{ "mountains": [ { "mountain": "Mont Blanc" } ], "seas": [ { "sea": "Mediterranean Sea" } ], "first_country": "Italy", "second_country": "France" }
+{ "mountains": [ { "mountain": "Changbai Shan" } ], "seas": [ { "sea": "Yellow Sea" } ], "first_country": "China", "second_country": "North Korea" }
+{ "mountains": [ { "mountain": "Vignemale" } ], "seas": [ { "sea": "Atlantic Ocean" }, { "sea": "Mediterranean Sea" } ], "first_country": "France", "second_country": "Spain" }
+{ "mountains": [ { "mountain": "Mt Bona" }, { "mountain": "Mt St.Elias" }, { "mountain": "Mt Fairweather" } ], "seas": [ { "sea": "Atlantic Ocean" }, { "sea": "Pacific Ocean" }, { "sea": "Arctic Ocean" } ], "first_country": "United States", "second_country": "Canada" }
+*/

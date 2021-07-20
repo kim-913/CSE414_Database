@@ -1,0 +1,27 @@
+SELECT DISTINCT y1.name as first_country, y2.name as second_country
+FROM geo.world x1, geo.world x2,
+     x1.mondial.country y1, x2.mondial.country y2,
+     x1.mondial.sea s1, x2.mondial.sea s2, 
+     x1.mondial.mountain m1, x2.mondial.mountain m2,
+     SPLIT(s1.`-country`, ' ') sc1, 
+     SPLIT(s2.`-country`, ' ') sc2,
+     SPLIT(m1.`-country`, ' ') mc1, 
+     SPLIT(m2.`-country`, ' ') mc2
+WHERE sc1 = y1.`-car_code`AND 
+      sc2 = y2.`-car_code` AND
+      mc1 = sc1 AND
+      mc2 = sc2 AND 
+      s1.`-id` = s2.`-id` AND
+      m1.`-id` = m2.`-id` AND
+      y1.`-car_code` > y2.`-car_code`;
+
+/*
+Duration of all jobs: 45.422 sec
+{ "first_country": "France", "second_country": "Spain" }
+{ "first_country": "Sweden", "second_country": "Norway" }
+{ "first_country": "Russia", "second_country": "Georgia" }
+{ "first_country": "China", "second_country": "North Korea" }
+{ "first_country": "United States", "second_country": "Canada" }
+{ "first_country": "Italy", "second_country": "France" }
+{ "first_country": "Chile", "second_country": "Argentina" }
+*/

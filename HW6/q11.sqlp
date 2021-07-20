@@ -1,0 +1,30 @@
+USE geoindex;
+SELECT DISTINCT y1.name as first_country, y2.name as second_country
+FROM country y1, country y2,
+    sea s1, 
+    sea s2, 
+    mountain m1, 
+    mountain m2,
+    SPLIT(s1.`-country`, ' ') sc1, 
+    SPLIT(s2.`-country`, ' ') sc2,
+    SPLIT(m1.`-country`, ' ') mc1, 
+    SPLIT(m2.`-country`, ' ') mc2
+WHERE sc1 = y1.`-car_code`AND 
+    sc2 = y2.`-car_code` AND
+    mc1 = sc1 AND
+    mc2 = sc2 AND 
+    s1.`-id` = s2.`-id` AND
+    m1.`-id` = m2.`-id` AND
+    y1.`-car_code` > y2.`-car_code`;
+
+/*
+Duration of all jobs: 0.491 sec
+results:
+{ "first_country": "France", "second_country": "Spain" }
+{ "first_country": "Sweden", "second_country": "Norway" }
+{ "first_country": "Russia", "second_country": "Georgia" }
+{ "first_country": "China", "second_country": "North Korea" }
+{ "first_country": "United States", "second_country": "Canada" }
+{ "first_country": "Italy", "second_country": "France" }
+{ "first_country": "Chile", "second_country": "Argentina" }
+*/

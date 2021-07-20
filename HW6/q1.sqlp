@@ -1,0 +1,42 @@
+Select a.name as city
+From geo.world x, x.mondial.country y, y.province z,
+                  CASE When z.city is missing then []
+                  When is_array(z.city) then z.city
+                  Else [z.city] END a
+Where y.name = 'Peru'
+Order by a.name ASC;
+
+/*
+Duration of all jobs: 0.21 sec
+results:
+{ "city": "Abancay" }
+{ "city": "Arequipa" }
+{ "city": "Ayacucho" }
+{ "city": "Cajamarca" }
+{ "city": "Callao" }
+{ "city": "Cerro de Pasco" }
+{ "city": "Chachapoyas" }
+{ "city": "Chiclayo" }
+{ "city": "Chimbote" }
+{ "city": "Chincha Alta" }
+{ "city": "Cuzco" }
+{ "city": "Huancavelica" }
+{ "city": "Huancayo" }
+{ "city": "Huanuco" }
+{ "city": "Huaraz" }
+{ "city": "Ica" }
+{ "city": "Iquitos" }
+{ "city": "Juliaca" }
+{ "city": "Lima" }
+{ "city": "Moquegua" }
+{ "city": "Moyobamba" }
+{ "city": "Piura" }
+{ "city": "Pucallpa" }
+{ "city": "Puerto Maldonado" }
+{ "city": "Puno" }
+{ "city": "Sullana" }
+{ "city": "Tacna" }
+{ "city": "Talara" }
+{ "city": "Trujillo" }
+{ "city": "Tumbes" }
+*/

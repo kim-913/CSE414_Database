@@ -1,0 +1,428 @@
+21:33:33.533 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.control.nc.NCShutdownHook - Shutdown hook called
+21:33:33.677 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.control.nc.NCShutdownHook - Thread dump at shutdown: 
+"main" [tid=1 state=TIMED_WAITING]
+	at java.base@11.0.10/java.lang.Thread.sleep(Native Method)
+	at app//org.apache.hyracks.control.nc.NCDriver.main(NCDriver.java:61)
+
+"Reference Handler" [tid=2 state=RUNNABLE]
+	at java.base@11.0.10/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@11.0.10/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+	at java.base@11.0.10/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+
+"Finalizer" [tid=3 state=WAITING lock=java.lang.ref.ReferenceQueue$Lock@856cb48]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at java.base@11.0.10/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+
+"Signal Dispatcher" [tid=4 state=RUNNABLE]
+
+"Common-Cleaner" [tid=10 state=TIMED_WAITING lock=java.lang.ref.ReferenceQueue$Lock@26ac88e7]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@11.0.10/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+	at java.base@11.0.10/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+"Log4j2-TF-2-Scheduled-1" [tid=12 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@75937cbb]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Log4j2-TF-2-Scheduled-2" [tid=13 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@75937cbb]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"ShutdownWatchdog" [tid=15 state=WAITING lock=java.util.concurrent.Semaphore$NonfairSync@3e46cbe8]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:885)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireShared(AbstractQueuedSynchronizer.java:1009)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireShared(AbstractQueuedSynchronizer.java:1324)
+	at java.base@11.0.10/java.util.concurrent.Semaphore.acquireUninterruptibly(Semaphore.java:341)
+	at app//org.apache.hyracks.util.ExitUtil$ShutdownWatchdog.run(ExitUtil.java:111)
+
+"IoRequestHandler-0" [tid=17 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2d9a6d53]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:417)
+	at app//org.apache.hyracks.control.nc.io.IoRequestHandler.run(IoRequestHandler.java:45)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@4b7e96a
+
+"IoRequestHandler-1" [tid=18 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2d9a6d53]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:417)
+	at app//org.apache.hyracks.control.nc.io.IoRequestHandler.run(IoRequestHandler.java:45)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@6475472c
+
+"Timer-0" [tid=20 state=TIMED_WAITING lock=java.util.TaskQueue@6f3323b7]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.util.TimerThread.mainLoop(Timer.java:553)
+	at java.base@11.0.10/java.util.TimerThread.run(Timer.java:506)
+
+"IPC Network Listener Thread [/127.0.0.1:53855]" [tid=21 state=RUNNABLE]
+	at java.base@11.0.10/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@11.0.10/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	- <locked sun.nio.ch.Util$2@12bec4e>
+	- <locked sun.nio.ch.KQueueSelectorImpl@9ba6e08>
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+	at app//org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.doRun(IPCConnectionManager.java:190)
+	at app//org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.run(IPCConnectionManager.java:181)
+
+"TCPEndpoint IO Thread [/127.0.0.1:53857]" [tid=22 state=RUNNABLE]
+	at java.base@11.0.10/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@11.0.10/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	- <locked sun.nio.ch.Util$2@77346a99>
+	- <locked sun.nio.ch.KQueueSelectorImpl@16cd153>
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+	at app//org.apache.hyracks.net.protocols.tcp.TCPEndpoint$IOThread.run(TCPEndpoint.java:133)
+
+"Log4j2-TF-4-Scheduled-3" [tid=23 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5ffb04ac]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1177)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Log4j2-TF-4-Scheduled-4" [tid=24 state=TIMED_WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5ffb04ac]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Executor-1:asterix_nc1" [tid=25 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5ebfb75]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+	at app//org.apache.asterix.transaction.management.service.logging.LogManager$FlushLogsLogger.run(LogManager.java:618)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@1a5b8489
+
+"Executor-2:asterix_nc1" [tid=26 state=WAITING lock=org.apache.asterix.transaction.management.service.logging.LogBuffer@515f39f3]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.lang.Object.wait(Object.java:328)
+	at app//org.apache.asterix.transaction.management.service.logging.LogBuffer.flush(LogBuffer.java:176)
+	at app//org.apache.asterix.transaction.management.service.logging.LogFlusher.call(LogManager.java:673)
+	at app//org.apache.asterix.transaction.management.service.logging.LogFlusher.call(LogManager.java:628)
+	at java.base@11.0.10/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@6bcbf05b
+
+"Executor-3:asterix_nc1" [tid=27 state=TIMED_WAITING lock=java.lang.Object@36de8cc2]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at app//org.apache.hyracks.storage.common.buffercache.DelayPageCleanerPolicy.notifyCleanCycleFinish(DelayPageCleanerPolicy.java:34)
+	at app//org.apache.hyracks.storage.common.buffercache.BufferCache$CleanerThread.runCleanCycle(BufferCache.java:773)
+	at app//org.apache.hyracks.storage.common.buffercache.BufferCache$CleanerThread.run(BufferCache.java:745)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@3241713e
+
+"Executor-4:asterix_nc1" [tid=28 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@310720d1]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+	at app//org.apache.asterix.messaging.NCMessageBroker$MessageDeliveryService.run(NCMessageBroker.java:162)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@4e38d975
+
+"Executor-5:asterix_nc1" [tid=29 state=TIMED_WAITING]
+	at java.base@11.0.10/java.lang.Thread.sleep(Native Method)
+	at app//org.apache.hyracks.control.common.result.ResultStateSweeper.run(ResultStateSweeper.java:44)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@15bc339
+
+"TCPEndpoint IO Thread [/127.0.0.1:53860]" [tid=30 state=RUNNABLE]
+	at java.base@11.0.10/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@11.0.10/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	- <locked sun.nio.ch.Util$2@6b6d55d7>
+	- <locked sun.nio.ch.KQueueSelectorImpl@43d579e8>
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+	at app//org.apache.hyracks.net.protocols.tcp.TCPEndpoint$IOThread.run(TCPEndpoint.java:133)
+
+"TCPEndpoint IO Thread [/127.0.0.1:53861]" [tid=31 state=RUNNABLE]
+	at java.base@11.0.10/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@11.0.10/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	- <locked sun.nio.ch.Util$2@12f45cc>
+	- <locked sun.nio.ch.KQueueSelectorImpl@9a6fc90>
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+	at app//org.apache.hyracks.net.protocols.tcp.TCPEndpoint$IOThread.run(TCPEndpoint.java:133)
+
+"RMI RenewClean-[127.0.0.1:53845]" [tid=32 state=TIMED_WAITING lock=java.lang.ref.ReferenceQueue$Lock@8e4d39e]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.rmi@11.0.10/sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:558)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"RMI GC Daemon" [tid=33 state=TIMED_WAITING lock=sun.rmi.transport.GC$LatencyLock@6096e153]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.rmi@11.0.10/sun.rmi.transport.GC$Daemon.run(GC.java:126)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+	at java.base@11.0.10/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+"RMI Scheduler(0)" [tid=34 state=TIMED_WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@1b6cd9a8]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"asterix_nc1-Heartbeat" [tid=35 state=TIMED_WAITING lock=java.util.concurrent.Semaphore$NonfairSync@2510e429]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1079)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1369)
+	at java.base@11.0.10/java.util.concurrent.Semaphore.tryAcquire(Semaphore.java:415)
+	at app//org.apache.hyracks.control.nc.heartbeat.HeartbeatTask.run(HeartbeatTask.java:59)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Worker:asterix_nc1" [tid=19 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@bc6bb36]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+	at app//org.apache.hyracks.control.common.work.WorkQueue$WorkerThread.run(WorkQueue.java:114)
+
+"nioEventLoopGroup-2-1" [tid=38 state=RUNNABLE]
+	at java.base@11.0.10/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@11.0.10/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	- <locked io.netty.channel.nio.SelectedSelectionKeySet@5c0d4f64>
+	- <locked sun.nio.ch.KQueueSelectorImpl@21d16cd4>
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+	at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:765)
+	at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:413)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:909)
+	at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"FIFO Writer Thread" [tid=40 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@342e56b]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+	at app//org.apache.hyracks.storage.common.buffercache.AsyncFIFOPageQueueManager.run(AsyncFIFOPageQueueManager.java:163)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Checkpoint Thread (41)" [tid=41 state=TIMED_WAITING]
+	at java.base@11.0.10/java.lang.Thread.sleep(Native Method)
+	at app//org.apache.asterix.transaction.management.service.recovery.CheckpointThread.run(CheckpointThread.java:61)
+
+"RMI TCP Accept-0" [tid=42 state=RUNNABLE]
+	at java.base@11.0.10/java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.base@11.0.10/java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:458)
+	at java.base@11.0.10/java.net.ServerSocket.implAccept(ServerSocket.java:565)
+	at java.base@11.0.10/java.net.ServerSocket.accept(ServerSocket.java:533)
+	at java.rmi@11.0.10/sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:394)
+	at java.rmi@11.0.10/sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:366)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"RMI Reaper" [tid=43 state=WAITING lock=java.lang.ref.ReferenceQueue$Lock@3de3f13e]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at java.rmi@11.0.10/sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:349)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Log4j2-TF-4-Scheduled-5" [tid=183 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5ffb04ac]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1177)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Executor-248:asterix_nc1" [tid=396 state=TIMED_WAITING lock=java.util.concurrent.SynchronousQueue$TransferStack@b23ff89]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+	at java.base@11.0.10/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462)
+	at java.base@11.0.10/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361)
+	at java.base@11.0.10/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"RMI TCP Connection(idle)" [tid=4364 state=TIMED_WAITING lock=java.util.concurrent.SynchronousQueue$TransferStack@21be85f5]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+	at java.base@11.0.10/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462)
+	at java.base@11.0.10/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361)
+	at java.base@11.0.10/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"SIGTERM handler" [tid=4365 state=WAITING lock=org.apache.hyracks.control.nc.NCShutdownHook@3f390d63]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.lang.Thread.join(Thread.java:1305)
+	at java.base@11.0.10/java.lang.Thread.join(Thread.java:1380)
+	at java.base@11.0.10/java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:107)
+	at java.base@11.0.10/java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:46)
+	at java.base@11.0.10/java.lang.Shutdown.runHooks(Shutdown.java:130)
+	at java.base@11.0.10/java.lang.Shutdown.exit(Shutdown.java:174)
+	- <locked java.lang.Class@54e041a4>
+	at java.base@11.0.10/java.lang.Terminator$1.handle(Terminator.java:51)
+	at java.base@11.0.10/jdk.internal.misc.Signal$1.run(Signal.java:220)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"ShutdownHook-asterix_nc1" [tid=16 state=RUNNABLE]
+	at java.management@11.0.10/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@11.0.10/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:521)
+	at java.management@11.0.10/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:509)
+	at app//org.apache.hyracks.util.ThreadDumpUtil.takeDumpString(ThreadDumpUtil.java:108)
+	at app//org.apache.hyracks.control.nc.NCShutdownHook.lambda$run$0(NCShutdownHook.java:48)
+	at app//org.apache.hyracks.control.nc.NCShutdownHook$$Lambda$265/0x0000000800334440.get(Unknown Source)
+	at app//org.apache.logging.log4j.util.LambdaUtil.getMessage(LambdaUtil.java:91)
+	at app//org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:1996)
+	at app//org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1859)
+	at app//org.apache.logging.log4j.spi.AbstractLogger.log(AbstractLogger.java:1658)
+	at app//org.apache.hyracks.control.nc.NCShutdownHook.run(NCShutdownHook.java:48)
+
+"SIGTERM handler" [tid=4366 state=BLOCKED lock=java.lang.Class@54e041a4 lockOwner="SIGTERM handler" (tid=4365]
+	at java.base@11.0.10/java.lang.Shutdown.exit(Shutdown.java:173)
+	at java.base@11.0.10/java.lang.Terminator$1.handle(Terminator.java:51)
+	at java.base@11.0.10/jdk.internal.misc.Signal$1.run(Signal.java:220)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+21:33:33.690 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.control.nc.NodeControllerService - Stopping NodeControllerService
+21:33:33.691 [ShutdownHook-asterix_nc1] WARN  org.apache.asterix.active.ActiveManager - Shutting down ActiveManager on node asterix_nc1
+21:33:33.705 [ShutdownHook-asterix_nc1] WARN  org.apache.asterix.active.ActiveManager - Shutdown ActiveManager on node asterix_nc1 complete
+21:33:33.708 [Executor-5:asterix_nc1] WARN  org.apache.hyracks.control.nc.result.ResultPartitionManager - Result cleaner thread interrupted, shutting down.
+21:33:33.709 [ShutdownHook-asterix_nc1] INFO  org.apache.asterix.hyracks.bootstrap.NCApplication - Stopping Asterix node controller: asterix_nc1
+21:33:33.988 [TCPEndpoint IO Thread [/127.0.0.1:53860]] ERROR org.apache.hyracks.net.protocols.tcp.TCPEndpoint - Unexpected tcp io error in connection TCPConnection[Remote Address: /127.0.0.1:59485 Local Address: /127.0.0.1:53860]
+org.apache.hyracks.api.exceptions.NetException: Socket Closed
+	at org.apache.hyracks.net.protocols.muxdemux.MultiplexedConnection.driveReaderStateMachine(MultiplexedConnection.java:342) ~[hyracks-net-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.net.protocols.muxdemux.MultiplexedConnection.notifyIOReady(MultiplexedConnection.java:113) ~[hyracks-net-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.net.protocols.tcp.TCPEndpoint$IOThread.run(TCPEndpoint.java:186) [hyracks-net-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+21:33:34.898 [asterix_nc1-Heartbeat] WARN  org.apache.hyracks.ipc.impl.ReconnectingIPCHandle - ipcHandle IPCHandle [addr=/127.0.0.1:1099 state=CLOSED] disconnected; will attempt to reconnect 1 times
+21:33:34.925 [IPC Network Listener Thread [/127.0.0.1:53855]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Exception finishing connect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779) ~[?:?]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.finishConnect(IPCConnectionManager.java:230) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.processSelectedKeys(IPCConnectionManager.java:220) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.doRun(IPCConnectionManager.java:199) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.run(IPCConnectionManager.java:181) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+21:33:34.926 [IPC Network Listener Thread [/127.0.0.1:53855]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Failed to finish connect to /127.0.0.1:1099
+21:33:34.927 [asterix_nc1-Heartbeat] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Connection to /127.0.0.1:1099 failed; retrying (retry attempt 1 of 1) after 100ms
+21:33:35.038 [IPC Network Listener Thread [/127.0.0.1:53855]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Exception finishing connect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779) ~[?:?]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.finishConnect(IPCConnectionManager.java:230) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.processSelectedKeys(IPCConnectionManager.java:220) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.doRun(IPCConnectionManager.java:199) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.run(IPCConnectionManager.java:181) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+21:33:35.038 [IPC Network Listener Thread [/127.0.0.1:53855]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Failed to finish connect to /127.0.0.1:1099
+21:33:35.045 [asterix_nc1-Heartbeat] WARN  org.apache.hyracks.control.nc.heartbeat.HeartbeatTask - Exception sending heartbeat; will retry after 1s: org.apache.hyracks.ipc.exceptions.IPCException: java.io.IOException: Connection failed to /127.0.0.1:1099
+21:33:36.046 [asterix_nc1-Heartbeat] WARN  org.apache.hyracks.ipc.impl.ReconnectingIPCHandle - ipcHandle IPCHandle [addr=/127.0.0.1:1099 state=CLOSED] disconnected; will attempt to reconnect 1 times
+21:33:36.067 [IPC Network Listener Thread [/127.0.0.1:53855]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Exception finishing connect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779) ~[?:?]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.finishConnect(IPCConnectionManager.java:230) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.processSelectedKeys(IPCConnectionManager.java:220) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.doRun(IPCConnectionManager.java:199) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.run(IPCConnectionManager.java:181) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+21:33:36.082 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Attempting to stop org.apache.hyracks.api.lifecycle.LifeCycleComponentManager@3569fc08
+21:33:36.084 [ShutdownHook-asterix_nc1] ERROR org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping instance
+21:33:36.084 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping component instance org.apache.asterix.transaction.management.service.recovery.CheckpointManager; dump state: false, dump path: null
+21:33:36.084 [IPC Network Listener Thread [/127.0.0.1:53855]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Failed to finish connect to /127.0.0.1:1099
+21:33:36.088 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping component instance org.apache.asterix.transaction.management.service.locking.ConcurrentLockManager; dump state: false, dump path: null
+21:33:36.088 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping component instance org.apache.asterix.transaction.management.service.transaction.TransactionManager; dump state: false, dump path: null
+21:33:36.088 [asterix_nc1-Heartbeat] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Connection to /127.0.0.1:1099 failed; retrying (retry attempt 1 of 1) after 100ms
+21:33:36.088 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping component instance org.apache.asterix.common.context.DatasetLifecycleManager; dump state: false, dump path: null
+21:33:36.131 [Executor-249:asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Flushing component with id: [2,2] in the index {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Dataverse/0/Dataverse", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 1, "num-scheduled-flushes":1, "current-memory-component":0}
+21:33:36.200 [IPC Network Listener Thread [/127.0.0.1:53855]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Exception finishing connect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779) ~[?:?]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.finishConnect(IPCConnectionManager.java:230) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.processSelectedKeys(IPCConnectionManager.java:220) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.doRun(IPCConnectionManager.java:199) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.run(IPCConnectionManager.java:181) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+21:33:36.201 [IPC Network Listener Thread [/127.0.0.1:53855]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Failed to finish connect to /127.0.0.1:1099
+21:33:36.202 [asterix_nc1-Heartbeat] WARN  org.apache.hyracks.control.nc.heartbeat.HeartbeatTask - Exception sending heartbeat; will retry after 1s: org.apache.hyracks.ipc.exceptions.IPCException: java.io.IOException: Connection failed to /127.0.0.1:1099
+21:33:36.204 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Dataverse/0/Dataverse", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.204 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Dataverse/0/Dataverse", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.205 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Dataverse/0/Dataverse", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.206 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Dataverse/0/Dataverse", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED
+21:33:36.230 [Executor-249:asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Flushing component with id: [2,2] in the index {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Dataset/0/Dataset", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 1, "num-scheduled-flushes":1, "current-memory-component":0}
+21:33:36.287 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Dataset/0/Dataset", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.288 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Dataset/0/Dataset", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.289 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Dataset/0/Dataset", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.289 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Dataset/0/Dataset", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED
+21:33:36.306 [Executor-249:asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Flushing component with id: [2,2] in the index {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Datatype/0/Datatype", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 1, "num-scheduled-flushes":1, "current-memory-component":0}
+21:33:36.349 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Datatype/0/Datatype", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.349 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Datatype/0/Datatype", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.350 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Datatype/0/Datatype", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"[2,2]"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.351 [ShutdownHook-asterix_nc1] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/red/storage/partition_0/Metadata/Datatype/0/Datatype", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 2, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED

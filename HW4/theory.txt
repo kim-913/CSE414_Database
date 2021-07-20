@@ -1,0 +1,47 @@
+Part 3: Functional Dependency Theory (35 points)
+Consider the following two relational schemas and sets of functional dependencies:
+For each of the below schemas, decompose it into BCNF. Show all of your work and explain, at each step, 
+which dependency violations you are correcting. Make sure you describe each step in your decomposition 
+steps. (10 points each)
+
+a. (10 points) R(A,B,C,D,E) with functional dependencies D → B, CE → A.
+    1. From D → B, D + = {D, B}. R can be represented as: R1(D, B), R2(A, C, D, E)
+    2. Here, R1 is BCNF, let's operate R2.
+    3. From CE → A, {C, E} + = {A, C, E}, R2 can be decomposed as: R3(A, C, E) and R4(C, D, E) 
+    4. Here, check R3, R4, there's no closure in R3, R4.
+    5. Thus, the final BCNF for R with the functional dependencies above is: 
+        R1(D, B), R3(A, C, E), R4(C, D, E)
+
+b. (10 points) S(A,B,C,D,E) with functional dependencies A → E, BC → A, DE → B.
+    1. From A → E, A + = {A, E}. S can be represented as S1(A, E), S2(A, B, C, D)
+    2. Here, S1 is BCNF, let's operate S2
+    3. From BC → A, {B, C} + = {B, C, A}, R2 cab be represented as: S3(A, B, C), S4(B, C, D)
+    4. Here, check S3, S4, there's no closure in R3, R4.
+    5. Thus, the final BCNF for S with the functional dependencies above is: 
+        S1(A, E), S3(A, B, C), S4(B, C, D)
+
+A set of attributes X is called closed (with respect to a given set of functional dependencies) if 
+X⁺ = X. Consider a relation with schema R(A,B,C,D) and an unknown set of functional dependencies. 
+For each closed attribute set below, give a set of functional dependencies that is consistent with it.
+
+c. (5 points) All subsets of {A,B,C,D} are closed.
+    Since all subsets closed, we can get:
+    A -> A
+    B -> B
+    C -> C
+    D -> D
+
+d. (5 points) The only closed subsets of {A,B,C,D} are {} and {A,B,C,D}.
+    Since the only closed subsets are {} and {A,B,C,D}, we get:
+    A -> B, C, D
+    B -> A, C, D
+    C -> A, B, D
+    D -> A, B, C
+
+e. (5 points) The only closed subsets of {A,B,C,D} are {}, {B,C}, and {A,B,C,D}.
+    Since the only closed subsets are {}, {B,C}, and {A,B,C,D}, we get:
+    B -> C
+    C -> B
+    A -> B, C, D
+    D -> A, B, C
+

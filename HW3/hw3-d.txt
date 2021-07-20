@@ -1,0 +1,9 @@
+Good sides: It's good using online DBMS since it's a public source where we can type our code down and run as long as we done 
+to get a result insdead of writing in a text generator and paste to sqlite3 to run the code. It also saves our tables at once 
+when we create and put values in and which is more convenient than off line DBMS such as sqlite3 because we may sometimes forget
+the name of the database we stored the tables and takes long time retreving them.
+
+Down Sides: When I'm doing this homework, there are many key words that automatically show up when hitting enter and sometimes 
+they don't make sense in the context and causes me problems. Meanwhile, if users hit "go back" on the website accidentally without saving
+their codes, the code will be lost and it's barely possible to retreive the code. It's also possible that we didn't finish out code in the 
+first time and would be going off line without saving the code. 

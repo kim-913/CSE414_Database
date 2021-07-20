@@ -1,0 +1,17 @@
+--------------------------
+Sun Mar  7 21:05:36 PST 2021
+--------------------------
+Using Java version: 11.0.10
+21:05:39.188 [main] INFO  org.apache.hyracks.control.nc.service.NCService - Waiting for connection from CC on *:9090
+21:05:40.868 [main] INFO  org.apache.hyracks.control.nc.service.NCService - Using JAVA_OPTS from conf file (jvm.args)
+21:05:40.869 [main] INFO  org.apache.hyracks.control.nc.service.NCService - Setting JAVA_OPTS to -XX:MaxGCPauseMillis=25000 -Xmx4916m
+21:05:40.870 [main] INFO  org.apache.hyracks.control.nc.service.NCService - Launching NCDriver process
+Using Java version: 11.0.10
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.hyracks.util.PidHelper (file:/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/repo/hyracks-util-0.3.4-SNAPSHOT.jar) to field sun.management.RuntimeImpl.jvm
+WARNING: Please consider reporting this to the maintainers of org.apache.hyracks.util.PidHelper
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+log4j:WARN No appenders could be found for logger (io.netty.util.internal.logging.InternalLoggerFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.

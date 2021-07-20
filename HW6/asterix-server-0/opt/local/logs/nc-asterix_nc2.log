@@ -1,0 +1,445 @@
+21:33:33.532 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.control.nc.NCShutdownHook - Shutdown hook called
+21:33:33.682 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.control.nc.NCShutdownHook - Thread dump at shutdown: 
+"main" [tid=1 state=TIMED_WAITING]
+	at java.base@11.0.10/java.lang.Thread.sleep(Native Method)
+	at app//org.apache.hyracks.control.nc.NCDriver.main(NCDriver.java:61)
+
+"Reference Handler" [tid=2 state=RUNNABLE]
+	at java.base@11.0.10/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@11.0.10/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+	at java.base@11.0.10/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+
+"Finalizer" [tid=3 state=WAITING lock=java.lang.ref.ReferenceQueue$Lock@59d5bebb]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at java.base@11.0.10/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+
+"Signal Dispatcher" [tid=4 state=RUNNABLE]
+
+"Common-Cleaner" [tid=10 state=TIMED_WAITING lock=java.lang.ref.ReferenceQueue$Lock@10511cd2]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@11.0.10/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+	at java.base@11.0.10/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+"Log4j2-TF-2-Scheduled-1" [tid=12 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7a892505]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Log4j2-TF-2-Scheduled-2" [tid=13 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7a892505]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"ShutdownWatchdog" [tid=15 state=WAITING lock=java.util.concurrent.Semaphore$NonfairSync@4319acbe]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:885)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireShared(AbstractQueuedSynchronizer.java:1009)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireShared(AbstractQueuedSynchronizer.java:1324)
+	at java.base@11.0.10/java.util.concurrent.Semaphore.acquireUninterruptibly(Semaphore.java:341)
+	at app//org.apache.hyracks.util.ExitUtil$ShutdownWatchdog.run(ExitUtil.java:111)
+
+"IoRequestHandler-0" [tid=17 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5021729a]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:417)
+	at app//org.apache.hyracks.control.nc.io.IoRequestHandler.run(IoRequestHandler.java:45)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@5c8504fd
+
+"IoRequestHandler-1" [tid=18 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5021729a]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:417)
+	at app//org.apache.hyracks.control.nc.io.IoRequestHandler.run(IoRequestHandler.java:45)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@4b7e96a
+
+"Timer-0" [tid=20 state=TIMED_WAITING lock=java.util.TaskQueue@480e53c0]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.util.TimerThread.mainLoop(Timer.java:553)
+	at java.base@11.0.10/java.util.TimerThread.run(Timer.java:506)
+
+"IPC Network Listener Thread [/127.0.0.1:53856]" [tid=21 state=RUNNABLE]
+	at java.base@11.0.10/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@11.0.10/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	- <locked sun.nio.ch.Util$2@7b9cf6c9>
+	- <locked sun.nio.ch.KQueueSelectorImpl@75eed958>
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+	at app//org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.doRun(IPCConnectionManager.java:190)
+	at app//org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.run(IPCConnectionManager.java:181)
+
+"TCPEndpoint IO Thread [/127.0.0.1:53858]" [tid=22 state=RUNNABLE]
+	at java.base@11.0.10/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@11.0.10/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	- <locked sun.nio.ch.Util$2@2e80c0dd>
+	- <locked sun.nio.ch.KQueueSelectorImpl@142a169e>
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+	at app//org.apache.hyracks.net.protocols.tcp.TCPEndpoint$IOThread.run(TCPEndpoint.java:133)
+
+"Log4j2-TF-4-Scheduled-3" [tid=23 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@89c906c]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1177)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Log4j2-TF-4-Scheduled-4" [tid=24 state=TIMED_WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@89c906c]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Executor-1:asterix_nc2" [tid=25 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@bbbac3e]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+	at app//org.apache.asterix.transaction.management.service.logging.LogManager$FlushLogsLogger.run(LogManager.java:618)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@a567e72
+
+"Executor-2:asterix_nc2" [tid=26 state=WAITING lock=org.apache.asterix.transaction.management.service.logging.LogBuffer@239503bc]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.lang.Object.wait(Object.java:328)
+	at app//org.apache.asterix.transaction.management.service.logging.LogBuffer.flush(LogBuffer.java:176)
+	at app//org.apache.asterix.transaction.management.service.logging.LogFlusher.call(LogManager.java:673)
+	at app//org.apache.asterix.transaction.management.service.logging.LogFlusher.call(LogManager.java:628)
+	at java.base@11.0.10/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@458544e0
+
+"Executor-3:asterix_nc2" [tid=27 state=TIMED_WAITING lock=java.lang.Object@67cf6fb6]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at app//org.apache.hyracks.storage.common.buffercache.DelayPageCleanerPolicy.notifyCleanCycleFinish(DelayPageCleanerPolicy.java:34)
+	at app//org.apache.hyracks.storage.common.buffercache.BufferCache$CleanerThread.runCleanCycle(BufferCache.java:773)
+	at app//org.apache.hyracks.storage.common.buffercache.BufferCache$CleanerThread.run(BufferCache.java:745)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@7051777c
+
+"Executor-4:asterix_nc2" [tid=28 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@b3c8cd3]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+	at app//org.apache.asterix.messaging.NCMessageBroker$MessageDeliveryService.run(NCMessageBroker.java:162)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@29314cc9
+
+"Executor-5:asterix_nc2" [tid=29 state=TIMED_WAITING]
+	at java.base@11.0.10/java.lang.Thread.sleep(Native Method)
+	at app//org.apache.hyracks.control.common.result.ResultStateSweeper.run(ResultStateSweeper.java:44)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+	Locked synchronizers:
+	- java.util.concurrent.ThreadPoolExecutor$Worker@159a48a6
+
+"TCPEndpoint IO Thread [/127.0.0.1:53862]" [tid=30 state=RUNNABLE]
+	at java.base@11.0.10/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@11.0.10/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	- <locked sun.nio.ch.Util$2@5d301bd6>
+	- <locked sun.nio.ch.KQueueSelectorImpl@56b37b2f>
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+	at app//org.apache.hyracks.net.protocols.tcp.TCPEndpoint$IOThread.run(TCPEndpoint.java:133)
+
+"TCPEndpoint IO Thread [/127.0.0.1:53863]" [tid=31 state=RUNNABLE]
+	at java.base@11.0.10/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@11.0.10/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	- <locked sun.nio.ch.Util$2@4a1d1c90>
+	- <locked sun.nio.ch.KQueueSelectorImpl@25285b14>
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+	at app//org.apache.hyracks.net.protocols.tcp.TCPEndpoint$IOThread.run(TCPEndpoint.java:133)
+
+"RMI RenewClean-[127.0.0.1:53845]" [tid=32 state=TIMED_WAITING lock=java.lang.ref.ReferenceQueue$Lock@781b1acc]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.rmi@11.0.10/sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:558)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"RMI GC Daemon" [tid=33 state=TIMED_WAITING lock=sun.rmi.transport.GC$LatencyLock@35bc6ce3]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.rmi@11.0.10/sun.rmi.transport.GC$Daemon.run(GC.java:126)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+	at java.base@11.0.10/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+"RMI Scheduler(0)" [tid=34 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@17e70f58]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"asterix_nc2-Heartbeat" [tid=35 state=TIMED_WAITING lock=java.util.concurrent.Semaphore$NonfairSync@7070164b]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1079)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1369)
+	at java.base@11.0.10/java.util.concurrent.Semaphore.tryAcquire(Semaphore.java:415)
+	at app//org.apache.hyracks.control.nc.heartbeat.HeartbeatTask.run(HeartbeatTask.java:59)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Worker:asterix_nc2" [tid=19 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@509dbff3]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+	at app//org.apache.hyracks.control.common.work.WorkQueue$WorkerThread.run(WorkQueue.java:114)
+
+"nioEventLoopGroup-2-1" [tid=37 state=RUNNABLE]
+	at java.base@11.0.10/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@11.0.10/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	- <locked io.netty.channel.nio.SelectedSelectionKeySet@6900a77>
+	- <locked sun.nio.ch.KQueueSelectorImpl@29a25832>
+	at java.base@11.0.10/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+	at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:765)
+	at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:413)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:909)
+	at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Checkpoint Thread (38)" [tid=38 state=TIMED_WAITING]
+	at java.base@11.0.10/java.lang.Thread.sleep(Native Method)
+	at app//org.apache.asterix.transaction.management.service.recovery.CheckpointThread.run(CheckpointThread.java:61)
+
+"FIFO Writer Thread" [tid=57 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5910c103]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+	at app//org.apache.hyracks.storage.common.buffercache.AsyncFIFOPageQueueManager.run(AsyncFIFOPageQueueManager.java:163)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Log4j2-TF-4-Scheduled-5" [tid=138 state=WAITING lock=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@89c906c]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1177)
+	at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"Executor-242:asterix_nc2" [tid=277 state=TIMED_WAITING lock=java.util.concurrent.SynchronousQueue$TransferStack@644f9ff5]
+	at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+	at java.base@11.0.10/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462)
+	at java.base@11.0.10/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361)
+	at java.base@11.0.10/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"SIGTERM handler" [tid=279 state=WAITING lock=org.apache.hyracks.control.nc.NCShutdownHook@14dda234]
+	at java.base@11.0.10/java.lang.Object.wait(Native Method)
+	at java.base@11.0.10/java.lang.Thread.join(Thread.java:1305)
+	at java.base@11.0.10/java.lang.Thread.join(Thread.java:1380)
+	at java.base@11.0.10/java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:107)
+	at java.base@11.0.10/java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:46)
+	at java.base@11.0.10/java.lang.Shutdown.runHooks(Shutdown.java:130)
+	at java.base@11.0.10/java.lang.Shutdown.exit(Shutdown.java:174)
+	- <locked java.lang.Class@54e041a4>
+	at java.base@11.0.10/java.lang.Terminator$1.handle(Terminator.java:51)
+	at java.base@11.0.10/jdk.internal.misc.Signal$1.run(Signal.java:220)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"ShutdownHook-asterix_nc2" [tid=16 state=RUNNABLE]
+	at java.management@11.0.10/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@11.0.10/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:521)
+	at java.management@11.0.10/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:509)
+	at app//org.apache.hyracks.util.ThreadDumpUtil.takeDumpString(ThreadDumpUtil.java:108)
+	at app//org.apache.hyracks.control.nc.NCShutdownHook.lambda$run$0(NCShutdownHook.java:48)
+	at app//org.apache.hyracks.control.nc.NCShutdownHook$$Lambda$249/0x00000008003ccc40.get(Unknown Source)
+	at app//org.apache.logging.log4j.util.LambdaUtil.getMessage(LambdaUtil.java:91)
+	at app//org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:1996)
+	at app//org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1859)
+	at app//org.apache.logging.log4j.spi.AbstractLogger.log(AbstractLogger.java:1658)
+	at app//org.apache.hyracks.control.nc.NCShutdownHook.run(NCShutdownHook.java:48)
+
+"SIGTERM handler" [tid=280 state=BLOCKED lock=java.lang.Class@54e041a4 lockOwner="SIGTERM handler" (tid=279]
+	at java.base@11.0.10/java.lang.Shutdown.exit(Shutdown.java:173)
+	at java.base@11.0.10/java.lang.Terminator$1.handle(Terminator.java:51)
+	at java.base@11.0.10/jdk.internal.misc.Signal$1.run(Signal.java:220)
+	at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+21:33:33.690 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.control.nc.NodeControllerService - Stopping NodeControllerService
+21:33:33.691 [ShutdownHook-asterix_nc2] WARN  org.apache.asterix.active.ActiveManager - Shutting down ActiveManager on node asterix_nc2
+21:33:33.705 [ShutdownHook-asterix_nc2] WARN  org.apache.asterix.active.ActiveManager - Shutdown ActiveManager on node asterix_nc2 complete
+21:33:33.706 [Executor-5:asterix_nc2] WARN  org.apache.hyracks.control.nc.result.ResultPartitionManager - Result cleaner thread interrupted, shutting down.
+21:33:33.707 [ShutdownHook-asterix_nc2] INFO  org.apache.asterix.hyracks.bootstrap.NCApplication - Stopping Asterix node controller: asterix_nc2
+21:33:33.988 [TCPEndpoint IO Thread [/127.0.0.1:53862]] ERROR org.apache.hyracks.net.protocols.tcp.TCPEndpoint - Unexpected tcp io error in connection TCPConnection[Remote Address: /127.0.0.1:59094 Local Address: /127.0.0.1:53862]
+org.apache.hyracks.api.exceptions.NetException: Socket Closed
+	at org.apache.hyracks.net.protocols.muxdemux.MultiplexedConnection.driveReaderStateMachine(MultiplexedConnection.java:342) ~[hyracks-net-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.net.protocols.muxdemux.MultiplexedConnection.notifyIOReady(MultiplexedConnection.java:113) ~[hyracks-net-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.net.protocols.tcp.TCPEndpoint$IOThread.run(TCPEndpoint.java:186) [hyracks-net-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+21:33:34.898 [asterix_nc2-Heartbeat] WARN  org.apache.hyracks.ipc.impl.ReconnectingIPCHandle - ipcHandle IPCHandle [addr=/127.0.0.1:1099 state=CLOSED] disconnected; will attempt to reconnect 1 times
+21:33:34.954 [IPC Network Listener Thread [/127.0.0.1:53856]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Exception finishing connect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779) ~[?:?]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.finishConnect(IPCConnectionManager.java:230) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.processSelectedKeys(IPCConnectionManager.java:220) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.doRun(IPCConnectionManager.java:199) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.run(IPCConnectionManager.java:181) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+21:33:34.954 [IPC Network Listener Thread [/127.0.0.1:53856]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Failed to finish connect to /127.0.0.1:1099
+21:33:34.954 [asterix_nc2-Heartbeat] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Connection to /127.0.0.1:1099 failed; retrying (retry attempt 1 of 1) after 100ms
+21:33:35.062 [IPC Network Listener Thread [/127.0.0.1:53856]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Exception finishing connect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779) ~[?:?]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.finishConnect(IPCConnectionManager.java:230) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.processSelectedKeys(IPCConnectionManager.java:220) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.doRun(IPCConnectionManager.java:199) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.run(IPCConnectionManager.java:181) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+21:33:35.063 [IPC Network Listener Thread [/127.0.0.1:53856]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Failed to finish connect to /127.0.0.1:1099
+21:33:35.063 [asterix_nc2-Heartbeat] WARN  org.apache.hyracks.control.nc.heartbeat.HeartbeatTask - Exception sending heartbeat; will retry after 1s: org.apache.hyracks.ipc.exceptions.IPCException: java.io.IOException: Connection failed to /127.0.0.1:1099
+21:33:36.010 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Attempting to stop org.apache.hyracks.api.lifecycle.LifeCycleComponentManager@2e61d218
+21:33:36.011 [ShutdownHook-asterix_nc2] ERROR org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping instance
+21:33:36.011 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping component instance org.apache.asterix.transaction.management.service.recovery.CheckpointManager; dump state: false, dump path: null
+21:33:36.011 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping component instance org.apache.asterix.transaction.management.service.locking.ConcurrentLockManager; dump state: false, dump path: null
+21:33:36.011 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping component instance org.apache.asterix.transaction.management.service.transaction.TransactionManager; dump state: false, dump path: null
+21:33:36.011 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping component instance org.apache.asterix.common.context.DatasetLifecycleManager; dump state: false, dump path: null
+21:33:36.065 [asterix_nc2-Heartbeat] WARN  org.apache.hyracks.ipc.impl.ReconnectingIPCHandle - ipcHandle IPCHandle [addr=/127.0.0.1:1099 state=CLOSED] disconnected; will attempt to reconnect 1 times
+21:33:36.068 [IPC Network Listener Thread [/127.0.0.1:53856]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Exception finishing connect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779) ~[?:?]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.finishConnect(IPCConnectionManager.java:230) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.processSelectedKeys(IPCConnectionManager.java:220) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.doRun(IPCConnectionManager.java:199) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.run(IPCConnectionManager.java:181) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+21:33:36.084 [IPC Network Listener Thread [/127.0.0.1:53856]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Failed to finish connect to /127.0.0.1:1099
+21:33:36.068 [ShutdownHook-asterix_nc2] INFO  org.apache.asterix.common.context.PrimaryIndexOperationTracker - Primary index on dataset 134 and partition 1 is empty... skipping flush
+21:33:36.087 [asterix_nc2-Heartbeat] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Connection to /127.0.0.1:1099 failed; retrying (retry attempt 1 of 1) after 100ms
+21:33:36.124 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/country/0/country", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.125 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/country/0/country", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.126 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/country/0/country", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.126 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/country/0/country", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED
+21:33:36.126 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/country/0/countryID", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.126 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/country/0/countryID", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.127 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/country/0/countryID", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.127 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/country/0/countryID", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED
+21:33:36.145 [ShutdownHook-asterix_nc2] INFO  org.apache.asterix.common.context.PrimaryIndexOperationTracker - Primary index on dataset 135 and partition 1 is empty... skipping flush
+21:33:36.171 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/mountain/0/mountain", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.172 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/mountain/0/mountain", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.172 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/mountain/0/mountain", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.172 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/mountain/0/mountain", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED
+21:33:36.172 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "PartitionedLSMInvertedIndex", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/mountain/0/mountainID", "memory" : [{"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.172 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "PartitionedLSMInvertedIndex", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/mountain/0/mountainID", "memory" : [{"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.172 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "PartitionedLSMInvertedIndex", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/mountain/0/mountainID", "memory" : [{"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.173 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "PartitionedLSMInvertedIndex", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/mountain/0/mountainID", "memory" : [{"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED
+21:33:36.185 [ShutdownHook-asterix_nc2] INFO  org.apache.asterix.common.context.PrimaryIndexOperationTracker - Primary index on dataset 136 and partition 1 is empty... skipping flush
+21:33:36.194 [IPC Network Listener Thread [/127.0.0.1:53856]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Exception finishing connect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779) ~[?:?]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.finishConnect(IPCConnectionManager.java:230) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.processSelectedKeys(IPCConnectionManager.java:220) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.doRun(IPCConnectionManager.java:199) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.run(IPCConnectionManager.java:181) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+21:33:36.194 [IPC Network Listener Thread [/127.0.0.1:53856]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Failed to finish connect to /127.0.0.1:1099
+21:33:36.194 [asterix_nc2-Heartbeat] WARN  org.apache.hyracks.control.nc.heartbeat.HeartbeatTask - Exception sending heartbeat; will retry after 1s: org.apache.hyracks.ipc.exceptions.IPCException: java.io.IOException: Connection failed to /127.0.0.1:1099
+21:33:36.214 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "PartitionedLSMInvertedIndex", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/sea/0/seaID", "memory" : [{"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.215 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "PartitionedLSMInvertedIndex", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/sea/0/seaID", "memory" : [{"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.215 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "PartitionedLSMInvertedIndex", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/sea/0/seaID", "memory" : [{"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.215 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "PartitionedLSMInvertedIndex", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/sea/0/seaID", "memory" : [{"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMInvertedIndexMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED
+21:33:36.215 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/sea/0/sea", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.215 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/sea/0/sea", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.215 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/sea/0/sea", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.215 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geoindex/sea/0/sea", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED
+21:33:36.224 [ShutdownHook-asterix_nc2] INFO  org.apache.asterix.common.context.PrimaryIndexOperationTracker - Primary index on dataset 118 and partition 1 is empty... skipping flush
+21:33:36.250 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/world/0/world", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.251 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/world/0/world", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.251 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/world/0/world", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.251 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/world/0/world", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED
+21:33:36.266 [ShutdownHook-asterix_nc2] INFO  org.apache.asterix.common.context.PrimaryIndexOperationTracker - Primary index on dataset 119 and partition 1 is empty... skipping flush
+21:33:36.290 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/country/0/country", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.291 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/country/0/country", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.291 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/country/0/country", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.291 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/country/0/country", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED
+21:33:36.291 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/country/0/countryID", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. STARTED
+21:33:36.291 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the disk components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/country/0/countryID", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.291 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deallocating memory components of: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/country/0/countryID", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}
+21:33:36.291 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.storage.am.lsm.common.impls.AbstractLSMIndex - Deactivating the index: {"class" : "LSMBTree", "dir" : "/Users/ziruoke/Desktop/CSE414/HW6/asterix-server-0/opt/local/data/blue/storage/partition_1/geo/country/0/countryID", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 1, "num-scheduled-flushes":0, "current-memory-component":0}. COMPLETED
+21:33:36.291 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping component instance org.apache.asterix.app.nc.RecoveryManager; dump state: false, dump path: null
+21:33:36.292 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping component instance org.apache.asterix.transaction.management.service.logging.LogManager; dump state: false, dump path: null
+21:33:36.292 [ShutdownHook-asterix_nc2] INFO  org.apache.asterix.transaction.management.service.logging.LogManager - Terminating LogFlusher thread ...
+21:33:36.292 [ShutdownHook-asterix_nc2] INFO  org.apache.asterix.transaction.management.service.logging.LogManager - LogFlusher thread is terminated.
+21:33:36.292 [ShutdownHook-asterix_nc2] INFO  org.apache.asterix.transaction.management.service.logging.LogManager - closing current log file with id(1)
+21:33:36.292 [ShutdownHook-asterix_nc2] INFO  org.apache.hyracks.api.lifecycle.LifeCycleComponentManager - Stopping component instance org.apache.hyracks.storage.common.buffercache.BufferCache; dump state: false, dump path: null
+21:33:36.293 [asterix_nc2-Heartbeat] INFO  org.apache.hyracks.control.nc.heartbeat.HeartbeatTask - Heartbeat task interrupted; shutting down
+21:33:36.298 [ShutdownHook-asterix_nc2] WARN  org.apache.hyracks.ipc.impl.ReconnectingIPCHandle - ipcHandle IPCHandle [addr=/127.0.0.1:1099 state=CLOSED] disconnected; will attempt to reconnect 1 times
+21:33:36.300 [IPC Network Listener Thread [/127.0.0.1:53856]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Exception finishing connect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779) ~[?:?]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.finishConnect(IPCConnectionManager.java:230) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.processSelectedKeys(IPCConnectionManager.java:220) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.doRun(IPCConnectionManager.java:199) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+	at org.apache.hyracks.ipc.impl.IPCConnectionManager$NetworkThread.run(IPCConnectionManager.java:181) [hyracks-ipc-0.3.4-SNAPSHOT.jar:0.3.4-SNAPSHOT]
+21:33:36.301 [IPC Network Listener Thread [/127.0.0.1:53856]] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Failed to finish connect to /127.0.0.1:1099
+21:33:36.301 [ShutdownHook-asterix_nc2] WARN  org.apache.hyracks.ipc.impl.IPCConnectionManager - Connection to /127.0.0.1:1099 failed; retrying (retry attempt 1 of 1) after 100ms
